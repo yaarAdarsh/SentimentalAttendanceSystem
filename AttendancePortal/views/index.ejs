@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+
+<% if(locals.mood){ %>
+
+  <h1> Stats of your today's mood</h1>
+
+    <img src=<%= photo %>> 
+
+    <h2>Mood&emsp;: &emsp;&emsp;&emsp;<%= locals.mood %></h2>
+    <h2>Poetry fo you : <%= locals.poem  %></h2>
+    <h2>Here are top 3 songs for you:<br>  <%= son[0].name %> <a href = <%= son[0].link %> target = blank>link</a><br><%= son[1].name %> <a href = <%= son[1].link %>  target = blank> link </a> <br> <%= son[2].name %> <a href = <%= son[2].link %> target = blank> link </a></h2>
+ 
+<% }else if(locals.error){ %>
+  <h1>Take Attendance</h1>
+  <h2><%= locals.error %></h2>
+  <h3>Failed to make request</h3>
+<% } else { %>
+    <h1>Take Attendance</h1>
+    <% } %> 
+
+    
+    
+
+<form action="/submit" method="POST">
+  <input type="submit" value="Click">
+</form>
+
+<%- include("partials/footer.ejs") %>
