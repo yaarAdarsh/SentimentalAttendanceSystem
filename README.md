@@ -1,4 +1,4 @@
-# Facial Mood Detection Machine Learning Model
+# Facial Mood Detection Attendance Taking Web App
 
 This project is an Attendance Taking App with Facial Mood Detection, powered by Flask to generate a model API. 
 It enhances the attendance experience by dynamically selecting music tracks and poetry based on the user's detected mood through facial expressions.
@@ -96,6 +96,23 @@ dense_3 (Dense)                 | (None, 7)              | 7,175
 - Poetry Recommendation: Recommends poetry based on the detected mood.
 - API Endpoint: Provides a Flask API endpoint for integrating the model with other applications.
 - Privacy: Ensures compliance with privacy regulations and ethical standards related to facial recognition technology.
+
+## Screenshots
+
+- Frontend:
+
+![image](images/1.png)
+![image](images/2.png)
+![image](images/3.png)
+
+- Results:
+
+![image](images/4.png)
+![image](images/5.png)
+![image](images/6.png)
+![image](images/7.png)
+![image](images/8.png)
+
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request with any improvements or features you'd like to add.
