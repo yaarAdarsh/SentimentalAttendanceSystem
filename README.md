@@ -72,6 +72,7 @@ dense_3 (Dense)                 | (None, 7)              | 7,175
    pip install -r requirements.txt
    ```
 3. Run the Flask application:
+   (Before running change the "load model" path directory(18th line) in app.py for "model.h5" file according to your local path)
    ```
    python app.py
    ```
