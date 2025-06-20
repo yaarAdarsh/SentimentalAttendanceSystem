@@ -12,7 +12,8 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 1
 
 info = {}
 
-haarcascade = "haarcascade_frontalface_default.xml"
+# haarcascade = "haarcascade_frontalface_default.xml"
+haarcascade = "haarcascade_frontalface_alt2.xml"
 label_map = ['Anger', 'Neutral', 'Fear', 'Happy', 'Sad', 'Surprise']
 print("+"*50, "loadin gmmodel")
 model = load_model(r"model.h5")

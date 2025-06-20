@@ -2,20 +2,33 @@
 
 <% if(locals.mood){ %>
 
-  <h1> Stats of your today's mood</h1>
+  <h1 class="head"> Stats of your today's mood</h1>
 
-    <img src=<%= photo %>> 
+  <img src=<%= photo %>> 
 
-    <h2>Mood&emsp;: &emsp;&emsp;&emsp;<%= locals.mood %></h2>
-    <h2>Poetry fo you : <%= locals.poem  %></h2>
-    <h2>Here are top 3 songs for you:<br>  <%= son[0].name %> <a href = <%= son[0].link %> target = blank>link</a><br><%= son[1].name %> <a href = <%= son[1].link %>  target = blank> link </a> <br> <%= son[2].name %> <a href = <%= son[2].link %> target = blank> link </a></h2>
+  <h2>Today's Mood&emsp;:&emsp;<%= locals.mood %></h2>
+  <div class="container">
+  <div class="box">
+    <h2 class="content"><u>Poetry for you:</u> </h2>
+    <h2><%= locals.poem %></h2>
+  </div>
+
+  <div class="box">
+    <h2>
+      <u>Here are top 3 songs for you:</u><br>
+      <%= son[0].name %> <a href="<%= son[0].link %>" target="_blank">link</a><br>
+      <%= son[1].name %> <a href="<%= son[1].link %>" target="_blank">link</a><br>
+      <%= son[2].name %> <a href="<%= son[2].link %>" target="_blank">link</a>
+    </h2>
+  </div>
+</div>
  
 <% }else if(locals.error){ %>
-  <h1>Take Attendance</h1>
+  <h1 class="head">Take Attendance</h1>
   <h2><%= locals.error %></h2>
-  <h3>Failed to make request</h3>
+  <h3>Failed to make request (Error 404)</h3>
 <% } else { %>
-    <h1>Take Attendance</h1>
+    <h1 class="head">Take Attendance</h1>
     <% } %> 
 
     

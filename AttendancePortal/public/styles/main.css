@@ -1,9 +1,47 @@
 body {
-  background: #152441;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
-  color: #3cbdb6;
+  background: #26413C;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  color: #FB8500;
 }
+
+.head {
+  color: #FB8500;
+  font-style: italic;
+  text-shadow: 2px 2px 3px #F7C68F;
+  font-size: 3.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .box {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #FB8500;
+    font-family: sans-serif;
+  }
+
+  .box h2 {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #FFA500;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: #fff;
+  }
 
 main {
   position: absolute;
@@ -21,24 +59,30 @@ main {
 h1 {
   font-size: 3.5rem;
 }
+h2 {
+  color: rgb(195, 192, 209);
+}
 
 input {
   appearance: none;
   -webkit-appearance: none;
   border: 0;
-  font-size: 0.9rem;
-  background: #888;
-  padding: 1rem;
-  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+  background: #ed502e;
+  padding: .5rem 1.5rem .5rem 1.5rem;
+  border: 4px solid #FFB703;
+  border-radius: 10px;
+  color: wheat;
   cursor: pointer;
 }
 
 img{
-  width: 200px;
-  height: 200px;
-  /* border-radius: 50%; */
+  height: 180px;
+  width: 250px;
   background-size: contain;
-  margin: 20px;
+  border: 10px solid rgb(195, 192, 209);
+  border-radius: 15px;
 }
 
 footer {

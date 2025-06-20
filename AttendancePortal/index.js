@@ -23,18 +23,48 @@ app.post("/submit", async(req, res) => {
     const result = response.data;
     const yoyo=result.link;
     mood = result.result;
+    let song;
     console.log(yoyo);
     console.log(mood);
-    if(mood==="Anger" || mood === "Fear"  ||mood==="Sad")
+    if(mood==="Anger")
     {
       let num = Math.floor(Math.random()*7);
       myPoem = poetry[num];
+      song = [songs[12], songs[13], songs[14]];
+
     }
-    else if(mood === "Happy" || mood === "Surprise" || mood ==="Neutral") {
+    else if(mood === "Fear")
+    {
+      let num = Math.floor(Math.random()*7);
+      myPoem = poetry[num];
+      song = [songs[15], songs[16], songs[17]];
+    }
+    else if(mood === "Sad")
+    {
+      let num = Math.floor(Math.random()*7);
+      myPoem = poetry[num];
+      song = [songs[3], songs[4], songs[5]];
+    }
+    else if(mood === "Happy") {
       let num = Math.floor(Math.random() * (14 - 8 + 1)) + 8;
       myPoem = poetry[num];
+      song = [songs[9], songs[10], songs[11]];
     }
-    res.render("index.ejs", { poem: myPoem, mood: mood, photo: yoyo, son: songs });
+    else if(mood === "Surprise")
+    {
+      let num = Math.floor(Math.random() * (14 - 8 + 1)) + 8;
+      myPoem = poetry[num];
+      song = [songs[0], songs[1], songs[2]];
+
+    }
+    else if(mood === "Neutral")
+    {
+      let num = Math.floor(Math.random() * (14 - 8 + 1)) + 8;
+      myPoem = poetry[num];
+      song = [songs[6], songs[7], songs[8]];
+    }
+
+    res.render("index.ejs", { poem: myPoem, mood: mood, photo: yoyo, son: song });
     console.log(result);
   } catch (error) {
     console.error("Failed to make request:", error.message);
@@ -67,9 +97,24 @@ const poetry = [
 ];
 
 const songs = [
-  {name: "Kya hua tera vada", link: "https://www.youtube.com/watch?v=Z5D1dhTMclI"},
+  {name: "Kya hua tera vada", link: "https://www.youtube.com/watch?v=Z5D1dhTMclI"},//Surprise
   {name: "Aa chal ke tujhe", link: "https://www.youtube.com/watch?v=Y_8VmzWOsgs"},
-  {name: "Mai Jindagi ka Saath", link: "https://www.youtube.com/watch?v=ivBhqDtJeiw"}
+  {name: "Mai Jindagi ka Saath", link: "https://www.youtube.com/watch?v=ivBhqDtJeiw"}, 
+  {name: "Channa Mereya", link: "https://www.youtube.com/watch?v=bzSTpdcs-EI"}, //sad
+  {name: "Tujhe Bhula Diya", link: "https://www.youtube.com/watch?v=-Hb2DeHvvEg"},
+  {name: "Naina - Dangal", link: "https://www.youtube.com/watch?v=KzBa4ZKTVjE"},
+  {name: "Yaara Seeli Seeli", link: "https://www.youtube.com/watch?v=zgC3-E36bwg"},//Neutral
+  {name: "Chalte Chalte Yun Hi Koi", link: "https://www.youtube.com/watch?v=X-40R7SfXJ4"},
+  {name: "Kaun Tujhe", link: "https://www.youtube.com/watch?v=Ov0YGGSY6gY"},
+  {name: "Tumhi Ho Bandhu", link: "https://www.youtube.com/watch?v=o1RducJbUdc"},//Happy
+  {name: "Sweety Tera Drama", link: "https://www.youtube.com/watch?v=RpuhD_xKadk"},
+  {name: "Nachde Ne Saare", link: "https://www.youtube.com/watch?v=HgIW7P4dsXU"},
+  {name: "Sadda Haq", link: "https://www.youtube.com/watch?v=VAJK04HOLd0"},//Anger
+  {name: "Jee Karda", link: "https://www.youtube.com/watch?v=-Hb2DeHvvEg"},
+  {name: "Kabira", link: "https://www.youtube.com/watch?v=jHNNMj5bNQw"},
+  {name: "Fikar Not", link: "https://www.youtube.com/watch?v=mxva6l4bCSI"}, //Fear
+  {name: "Agar Tum Sath Ho", link: "https://www.youtube.com/watch?v=xRb8hxwN5zc"},
+  {name: "Judaai", link: "https://www.youtube.com/watch?v=f7dd7aojpUY"}
 ];
 
  
