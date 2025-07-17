@@ -100,12 +100,6 @@ dense_3 (Dense)                 | (None, 7)              | 7,175
 
 ## Screenshots
 
-- Frontend:
-
-![image](images/1.png)
-![image](images/2.png)
-![image](images/3.png)
-
 - Results:
 
 ![image](images/4.png)
@@ -114,6 +108,12 @@ dense_3 (Dense)                 | (None, 7)              | 7,175
 ![image](images/7.png)
 ![image](images/8.png)
 
+
+- Frontend:
+
+![image](images/1.png)
+![image](images/2.png)
+![image](images/3.png)
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request with any improvements or features you'd like to add.
